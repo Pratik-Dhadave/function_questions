@@ -38,6 +38,18 @@ int createNumberUsingDigit(int numberOfDigit){
     }
     return num;
 }
+void printAllDigits(int n){
+    while(n>0){
+        int oncesDigit = n%10;
+        cout<<"Digit is:"<<oncesDigit<<endl;
+        n=n/10;
+    }
+}
+float KMtoMiles(float km){
+    float _1KM = 0.621371;
+    float miles = km * _1KM;
+    return miles;
+}
 int main(){
     // float radius;
     // cin>>radius;
@@ -48,9 +60,20 @@ int main(){
     // setKthBit(10,2);
     // convetTemperatue(36.50);
 
-    int numberOfDigit;
-    cin>>numberOfDigit;
-    int num= createNumberUsingDigit(numberOfDigit);
-    cout<<"ceated number using digit:"<<num;
+    // int numberOfDigit;
+    // cin>>numberOfDigit;
+    // int num= createNumberUsingDigit(numberOfDigit);
+    // cout<<"ceated number using digit:"<<num;
+
+    // int n;
+    // cout<<"Enter number:"<<endl;
+    // cin>>n;
+    // printAllDigits(n);
+
+    float km;
+    cout<<"Enter KM:"<<endl;
+    cin>>km;
+    float miles = KMtoMiles(km);
+    cout<<"Miles is:"<<miles;
     return 0;
 }
